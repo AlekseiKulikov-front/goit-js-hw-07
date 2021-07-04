@@ -4,13 +4,13 @@ let counterValue = Number(spanEl.textContent);
 
 /* console.log(counterValue); */
 
-const btnIncrement = document.querySelector('[data-action="increment"]');
+const btnPlus = document.querySelector('[data-action="increment"]');
 
-const btnDecrement = document.querySelector('[data-action="decrement"]');
+const btnMinus = document.querySelector('[data-action="decrement"]');
 
-/* console.log(btnIncrement, btnDecrement); */
+/* console.log(btnPlus, btnMinus); */
 
-const increment = () => {
+const plus = () => {
   for (let i = 0; i !== undefined; i += 1) {
     counterValue += 1;
     console.log(counterValue);
@@ -18,14 +18,14 @@ const increment = () => {
   }
 };
 
-const decrement = () => {
+const minus = () => {
   counterValue -= 1;
   console.log(counterValue);
   spanEl.textContent = `${counterValue}`;
 };
 
-const btnIncrementEvent = btnIncrement.addEventListener('click', increment);
+const btnPlusEvent = btnPlus.addEventListener('click', plus);
 
-const btnDecrementEvent = btnDecrement.addEventListener('click', decrement);
+const btnMinusEvent = btnMinus.addEventListener('click', minus);
 
 /* console.log(counterValue); */
